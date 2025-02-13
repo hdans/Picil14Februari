@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be My Valentine</title>
+  </head>
+
+  <style>
+    body {
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Courier";
+  background-color: #feffee;
+  color: #f7ea00;
+}
+
+img {
+  height: 400px;
+  width: auto;
+  padding: 10px;
+}
+
+#valentineQuestion {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.answerButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px;
+  font-family: "courier";
+  margin-bottom: 20px;
+  background-color: rgb(250, 252, 244);
+  color: #adaa29;
+  border-radius: 12px;
+  border: 2px solid rgb(250, 252, 244);
+  box-shadow: 1px 1px 2px #f7ea00;
+  transition: 0.3s;
+}
+
+.answerButton:hover {
+  background-color: #f7ea00;
+  color: rgb(250, 252, 244);
+  border: 2px solid #f7ea00;
+  box-shadow: 1px 1px 2px rgb(250, 252, 244);
+}
+
+  </style>
+  <body>
+    <div id="valentineQuestion"><b>So that...</b></div>
+    <img src="cat.png" alt="cat asking question" class="responsive" />
+    <div id="valentineQuestion" style="font-size: 25px;">Please tell me before, if you're visi, click the button</div>
+    <button class="answerButton" onclick="location.href='7.html'">
+      Yes, i'm.
+    </button>
+    <button class="answerButton" id="noButton">BUKAN</button>
+
+    <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="7.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 20 + "px"; 
+        });
+    </script>
+  </body>
+</html>
