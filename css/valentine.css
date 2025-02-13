@@ -17,6 +17,14 @@ img {
   padding: 10px;
 }
 
+video {
+  border-radius: 20px;
+  margin: auto;
+  height: 400px;
+  width: auto;
+  padding: 10px;
+}
+
 #valentineQuestion {
   display: block;
   font-size: 50px;
